@@ -19,7 +19,7 @@ pipeline {
           stage('docker run') {
             steps {
                 script {
-                    sh "ddocker run -it -d -p90${BUILD_ID}:80  pablocblog/homer_page:1.0.0-${BUILD_ID}"
+                    sh "docker run -it -d -p90${BUILD_ID}:80  pablocblog/homer_page:1.0.0-${BUILD_ID}"
                 }
             }
         }
